@@ -1,0 +1,9 @@
+# Custom domain held back until DNS is configured for bhurise.com.
+# To go live on the custom domain: point DNS (see BUILD-STEPS.md §8),
+# then remove the line below, commit CNAME, and push — or just set the
+# custom domain in Settings → Pages (GitHub will create CNAME for you).
+CNAME
+
+# OS cruft
+.DS_Store
+Thumbs.db
