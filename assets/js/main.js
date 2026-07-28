@@ -128,7 +128,7 @@
         e.preventDefault();
         var note = form.querySelector('.form-status');
         if (note) {
-          note.textContent = 'Thank you — this form is a placeholder. Connect a form service (see BUILD-STEPS.md) or email hello@bhurise.com to go live.';
+          note.textContent = 'Thank you — this form is a placeholder. Connect a form service (see BUILD-STEPS.md) or email info@bhurise.com to go live.';
           note.style.color = 'var(--brass)';
         }
       }
