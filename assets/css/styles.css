@@ -152,7 +152,7 @@ h1,h2,h3,h4,p{margin:0}
 .nav-bar .container{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);transition:height .35s var(--ease)}
 .brand{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
 .brand img{height:68px;width:auto;transition:height .35s var(--ease)}
-.nav{display:flex;align-items:center;gap:2.1rem}
+.nav{display:flex;align-items:center;gap:2.1rem;margin-left:auto;margin-right:2.6rem}
 .nav a{
   color:rgba(244,240,232,.86);font-weight:500;font-size:.98rem;position:relative;padding:.4em 0;
   transition:color .25s;
