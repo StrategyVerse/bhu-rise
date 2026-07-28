@@ -1,12 +1,12 @@
 /* =========================================================
    BHŪ RISE VENTURES — Design System
-   Forest & Gold · Hanken Grotesk + Fraunces (display serif)
+   Forest & Gold · Inter (UI/body) + Newsreader (display serif)
    Brand tokens per Brand Book (Edition 1.0 · 2026)
    ========================================================= */
 
 /* ---------- Fonts ----------
    Loaded via <link rel="preconnect"> + stylesheet in each page <head>
-   (faster first paint than @import). Families: Hanken Grotesk + Fraunces. */
+   (faster first paint than @import). Families: Inter + Newsreader. */
 
 /* ---------- Tokens ---------- */
 :root{
@@ -34,8 +34,8 @@
   --line-strong:rgba(22,54,43,.20);
 
   /* Type */
-  --sans:'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --serif:'Newsreader', Georgia, 'Times New Roman', serif;
 
   /* Metrics */
   --container:1240px;
