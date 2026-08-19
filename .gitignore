@@ -1,9 +1,66 @@
-# Custom domain held back until DNS is configured for bhurise.com.
-# To go live on the custom domain: point DNS (see BUILD-STEPS.md §8),
-# then remove the line below, commit CNAME, and push — or just set the
-# custom domain in Settings → Pages (GitHub will create CNAME for you).
-CNAME
+# ============================================================
+#  Bhū Rise Ventures — website repo (PUBLIC)
+#  Keep internal / private material OUT of the public repo.
+#  Note: CNAME, .nojekyll, robots.txt, sitemap.xml, site.webmanifest
+#  are intentionally TRACKED — they are part of the live site.
+# ============================================================
 
-# OS cruft
+# --- OS / editor cruft ---
 .DS_Store
 Thumbs.db
+*.swp
+*~
+
+# --- Private / internal material (belt-and-suspenders) ---
+# None of these exist in the repo today; this prevents accidentally
+# publishing drafts, notes, or source material if ever placed here.
+CLAUDE.md
+.claude/
+/drafts/
+/notes/
+/internal/
+/_private/
+.env
+.env.*
+
+# Project notes & office/design source. The live site is .html/.css/.js,
+# so these are never site assets. To publish one deliberately, force it:
+#   git add -f <file>
+*.md
+!README.md
+*.xlsx
+*.xls
+*.csv
+*.pptx
+*.docx
+*.pdf
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# --- Unused brand/logo exports: kept locally, not published ---
+assets/img/png/app-icon/bhurise-appicon-1024.png
+assets/img/png/app-icon/bhurise-appicon-180.png
+assets/img/png/app-icon/bhurise-appicon-512.png
+assets/img/png/bhurise-icon-forest.png
+assets/img/png/bhurise-icon-ink.png
+assets/img/png/bhurise-icon-reversed.png
+assets/img/png/bhurise-lockup-black.png
+assets/img/png/bhurise-lockup-forest.png
+assets/img/png/bhurise-lockup-ink.png
+assets/img/png/bhurise-lockup-reversed.png
+assets/img/png/bhurise-stacked-forest.png
+assets/img/png/bhurise-stacked-reversed.png
+assets/img/png/favicon/bhurise-icon-16.png
+assets/img/png/favicon/bhurise-icon-64.png
+assets/img/svg/bhurise-icon-forest.svg
+assets/img/svg/bhurise-icon-ink.svg
+assets/img/svg/bhurise-icon-reversed.svg
+assets/img/svg/bhurise-lockup-black.svg
+assets/img/svg/bhurise-lockup-forest.svg
+assets/img/svg/bhurise-lockup-ink.svg
+assets/img/svg/bhurise-lockup-reversed-transparent.svg
+assets/img/svg/bhurise-lockup-reversed.svg
+assets/img/svg/bhurise-stacked-forest.svg
+assets/img/svg/bhurise-stacked-reversed.svg
