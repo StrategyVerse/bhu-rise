@@ -85,6 +85,10 @@ h1,h2,h3,h4,p{margin:0}
 .grid{display:grid;gap:clamp(20px,3vw,36px)}
 @media(min-width:720px){.g-2{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.g-3{grid-template-columns:repeat(3,1fr)}.g-4{grid-template-columns:repeat(4,1fr)}}
+/* two-up layout that centres an orphaned last card instead of left-aligning it */
+.grid-center{display:flex;flex-wrap:wrap;justify-content:center}
+.grid-center>*{flex:1 1 340px;max-width:calc(50% - clamp(10px,1.5vw,18px))}
+@media(max-width:640px){.grid-center>*{max-width:100%}}
 
 /* ---------- Typography ---------- */
 .eyebrow{
