@@ -95,7 +95,7 @@
             <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
           </div>
           <div class="grid g-2" style="gap:0 1.2rem">
-            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" required pattern="(?=(?:\D*\d){10,15}\D*$)[\d\s\+\-\(\)]+" title="Enter a valid phone number — 10 to 15 digits; +, spaces, hyphens and brackets allowed."></div>
             <div class="field"><label for="interest">I'm interested in</label>
               <select id="interest" name="interest" required>
                 <option value="" disabled selected>Select one</option>
