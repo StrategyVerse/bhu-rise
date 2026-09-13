@@ -119,19 +119,34 @@
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  /* ---------- Contact form (front-end only stub) ---------- */
+  /* ---------- Contact form (AJAX submit → email via FormSubmit) ---------- */
   var form = document.getElementById('contact-form');
-  if (form) {
+  if (form && form.getAttribute('action')) {
+    var statusEl = form.querySelector('.form-status');
+    var setStatus = function (msg, color) { if (statusEl) { statusEl.textContent = msg; statusEl.style.color = color; } };
     form.addEventListener('submit', function (e) {
-      // If no real endpoint is wired, prevent submit and show a friendly note.
-      if (form.getAttribute('data-endpoint') === 'pending') {
-        e.preventDefault();
-        var note = form.querySelector('.form-status');
-        if (note) {
-          note.textContent = 'Thank you — this form is a placeholder. Connect a form service (see BUILD-STEPS.md) or email info@bhurise.com to go live.';
-          note.style.color = 'var(--brass)';
+      e.preventDefault();
+      var honey = form.querySelector('[name="_honey"]');
+      if (honey && honey.value) return; // silently drop bots
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
+      setStatus('Sending…', 'var(--text-soft)');
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; });
+      }).then(function (res) {
+        if (res.ok && (res.j.success === true || String(res.j.success) === 'true')) {
+          form.reset();
+          setStatus('Thank you — your enquiry has been sent. We’ll get back to you within one business day.', 'var(--brass)');
+        } else {
+          setStatus((res.j && res.j.message) ? res.j.message : 'Sorry, something went wrong. Please email info@bhurise.com directly.', '#a3403a');
         }
-      }
+      }).catch(function () {
+        setStatus('Sorry, something went wrong. Please email info@bhurise.com directly.', '#a3403a');
+      }).then(function () { if (btn) btn.disabled = false; });
     });
   }
 })();
