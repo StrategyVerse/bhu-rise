@@ -119,15 +119,13 @@
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  /* ---------- Contact form (AJAX submit → email via FormSubmit) ---------- */
+  /* ---------- Contact form (AJAX submit → email via Web3Forms) ---------- */
   var form = document.getElementById('contact-form');
   if (form && form.getAttribute('action')) {
     var statusEl = form.querySelector('.form-status');
     var setStatus = function (msg, color) { if (statusEl) { statusEl.textContent = msg; statusEl.style.color = color; } };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var honey = form.querySelector('[name="_honey"]');
-      if (honey && honey.value) return; // silently drop bots
       var btn = form.querySelector('[type="submit"]');
       if (btn) btn.disabled = true;
       setStatus('Sending…', 'var(--text-soft)');
