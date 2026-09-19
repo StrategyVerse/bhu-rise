@@ -102,6 +102,10 @@ h1,h2,h3,h4,p{margin:0}
   .video-frame{height:auto;aspect-ratio:9/16;width:min(300px,78%);margin-inline:auto}
 }
 
+/* Leadership photo tiles */
+.team-photo{aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.4rem;background:var(--forest);box-shadow:var(--shadow-md)}
+.team-photo img,.team-photo svg{width:100%;height:100%;object-fit:cover;display:block}
+
 /* ---------- Typography ---------- */
 .eyebrow{
   font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
