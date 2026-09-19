@@ -115,6 +115,18 @@
     }, { passive: true });
   }
 
+  /* ---------- Expandable leadership bios ---------- */
+  var bioToggles = document.querySelectorAll('.bio-toggle');
+  bioToggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var more = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      if (more) more.hidden = open;
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.firstChild.nodeValue = open ? 'Read full profile ' : 'Show less ';
+    });
+  });
+
   /* ---------- Footer year ---------- */
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();

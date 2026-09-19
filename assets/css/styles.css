@@ -103,8 +103,15 @@ h1,h2,h3,h4,p{margin:0}
 }
 
 /* Leadership photo tiles */
+.team-grid{align-items:start}
 .team-photo{aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.4rem;background:var(--forest);box-shadow:var(--shadow-md)}
 .team-photo img,.team-photo svg{width:100%;height:100%;object-fit:cover;display:block}
+.bio-more[hidden]{display:none}
+.bio-more>p{margin-top:.9rem}
+.bio-toggle{margin-top:1rem;background:none;border:0;padding:0;cursor:pointer;color:var(--brass);font-weight:600;font-family:inherit;font-size:.95rem;display:inline-flex;align-items:center;gap:.4rem}
+.bio-toggle:hover{text-decoration:underline}
+.bio-toggle .ic{transition:transform .3s var(--ease)}
+.bio-toggle[aria-expanded="true"] .ic{transform:rotate(90deg)}
 
 /* ---------- Typography ---------- */
 .eyebrow{
