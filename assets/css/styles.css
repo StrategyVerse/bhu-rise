@@ -387,8 +387,9 @@ body.nav-open{overflow:hidden}
 .footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px;transition:color .25s}
 .footer-bottom a:hover{color:var(--gold-light)}
 .footer-bottom .socials{display:flex;gap:1rem}
-.footer-bottom .socials a{width:36px;height:36px;border:1px solid rgba(244,240,232,.18);border-radius:50%;display:grid;place-items:center;transition:border-color .3s,color .3s,transform .3s}
-.footer-bottom .socials a:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+.footer-bottom .socials a{width:38px;height:38px;border:1px solid rgba(244,240,232,.3);border-radius:50%;display:grid;place-items:center;color:rgba(244,240,232,.82);text-decoration:none;transition:border-color .3s,color .3s,background-color .3s,transform .3s}
+.footer-bottom .socials a svg{width:17px;height:17px;display:block;fill:currentColor}
+.footer-bottom .socials a:hover{border-color:var(--gold-light);color:var(--forest);background-color:var(--gold-light);transform:translateY(-2px)}
 
 /* ---------- Reveal animations ---------- */
 [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
