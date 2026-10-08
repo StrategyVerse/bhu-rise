@@ -384,6 +384,8 @@ body.nav-open{overflow:hidden}
 .footer-col a{display:block;padding:.35em 0;color:rgba(244,240,232,.68);font-size:.95rem;transition:color .25s,padding-left .25s}
 .footer-col a:hover{color:var(--gold-light);padding-left:4px}
 .footer-bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;padding-top:28px;font-size:.85rem;color:rgba(244,240,232,.5)}
+.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px;transition:color .25s}
+.footer-bottom a:hover{color:var(--gold-light)}
 .footer-bottom .socials{display:flex;gap:1rem}
 .footer-bottom .socials a{width:36px;height:36px;border:1px solid rgba(244,240,232,.18);border-radius:50%;display:grid;place-items:center;transition:border-color .3s,color .3s,transform .3s}
 .footer-bottom .socials a:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
