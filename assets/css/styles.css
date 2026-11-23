@@ -440,6 +440,11 @@ body.nav-open{overflow:hidden}
 .post a:hover{color:var(--forest);border-color:var(--forest)}
 .post hr{height:1px;background:var(--line);border:0;margin-block:2.6rem}
 
+/* lead / inline figure */
+.post-figure{margin:0 0 .4rem}
+.post-figure img{width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block}
+.post-figure figcaption{margin-top:.7rem;font-size:.82rem;color:var(--text-soft);text-align:center}
+
 /* responsive table */
 .post .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--radius-lg)}
 .post table{width:100%;border-collapse:collapse;font-size:.97rem;min-width:420px}
