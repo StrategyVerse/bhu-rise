@@ -420,3 +420,49 @@ body.nav-open{overflow:hidden}
 .center{text-align:center}
 .mt-3{margin-top:1.5rem}.mt-4{margin-top:2rem}.mt-5{margin-top:2.6rem}
 .disclaimer{font-size:.82rem;color:var(--text-soft);max-width:70ch}
+
+/* ---------- Article (long-form post) ---------- */
+.post{max-width:74ch;margin-inline:auto}
+.post>*+*{margin-top:1.35rem}
+.post p{color:var(--text);font-size:1.075rem;line-height:1.78}
+.post .standfirst{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.5;color:var(--forest);font-weight:400;padding-bottom:1.6rem;border-bottom:1px solid var(--line)}
+.post .standfirst strong{color:var(--brass);font-weight:400;font-style:italic}
+.post h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.9vw,2.25rem);line-height:1.14;letter-spacing:-.01em;margin-top:2.9rem;color:var(--forest)}
+.post h3{font-weight:600;font-size:clamp(1.12rem,1.6vw,1.32rem);letter-spacing:-.01em;margin-top:1.9rem;color:var(--text)}
+.post ul,.post ol{padding-left:1.35rem;display:grid;gap:.55rem}
+.post ul{list-style:disc}
+.post ol{list-style:decimal}
+.post li{color:var(--text);line-height:1.72;padding-left:.2rem}
+.post li::marker{color:var(--brass)}
+.post li>strong:first-child{color:var(--forest)}
+.post strong{font-weight:600;color:var(--forest)}
+.post a{color:var(--brass);border-bottom:1.5px solid var(--gold);transition:color .25s,border-color .25s}
+.post a:hover{color:var(--forest);border-color:var(--forest)}
+.post hr{height:1px;background:var(--line);border:0;margin-block:2.6rem}
+
+/* responsive table */
+.post .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--radius-lg)}
+.post table{width:100%;border-collapse:collapse;font-size:.97rem;min-width:420px}
+.post th,.post td{text-align:left;padding:.85em 1.1em;border-bottom:1px solid var(--line);vertical-align:top}
+.post thead th{background:var(--forest);color:var(--cream);font-weight:600;letter-spacing:.01em}
+.post tbody tr:last-child td{border-bottom:0}
+.post tbody tr:nth-child(even){background:var(--cream)}
+.post td strong{color:var(--forest)}
+
+/* "verify / the case against" callout */
+.post .callout{background:var(--cream);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:1.1rem 1.4rem;font-size:1rem;color:var(--text-soft)}
+.post .callout strong{color:var(--forest)}
+
+/* FAQ block */
+.post .faq{display:grid;gap:0;margin-top:1.4rem}
+.post .faq__q{border-top:1px solid var(--line);padding:1.3rem 0 .3rem}
+.post .faq__q:last-of-type{border-bottom:1px solid var(--line)}
+.post .faq__q h3{margin-top:0}
+.post .faq__q p{color:var(--text-soft);font-size:1rem}
+
+/* post meta row under title */
+.post-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;align-items:center;margin-top:1.4rem;color:rgba(244,240,232,.72);font-size:.86rem;letter-spacing:.03em}
+.post-meta .pill{background:rgba(228,200,119,.16);color:var(--gold-light);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;padding:.4em .8em;border-radius:3px}
+
+/* back link + related */
+.post-foot{max-width:74ch;margin-inline:auto;margin-top:3rem;padding-top:1.8rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
